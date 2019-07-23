@@ -1,7 +1,6 @@
 package com.vydia.RNUploader;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
 
@@ -49,7 +48,7 @@ public class UploaderModule extends ReactContextBaseJavaModule {
   /*
   Sends an event to the JS module.
    */
-  private void sendEvent(String eventName, @Nullable WritableMap params) {
+  private void sendEvent(String eventName, WritableMap params) {
     this.getReactApplicationContext().getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit("RNFileUploader-" + eventName, params);
   }
 
